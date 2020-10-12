@@ -25,9 +25,7 @@ const PagesStackScreen = () => (
         />
         <PagesStack.Screen
             name="User"
-            options={{
-                title: 'Users',
-            }}
+            options={({ route }) => ({ title: route.params.user.name })}
             component={User}
         />
     </PagesStack.Navigator>
